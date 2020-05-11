@@ -234,6 +234,8 @@ export class FocusElement {
       try {
         this.$el.__vue__.$vnode.componentOptions.listeners.click();
       } catch (e) {}
+    } else {
+      this.$el.click();
     }
   }
 
@@ -292,6 +294,13 @@ export default {
         // set this element in focus if no element has focus and this is marked default
         if (focusElement.isDefault && !navigationService.getFocusElementInFocus()) {
           focusElement.focus();
+        }
+      },
+      inserted: (el: any, binding: any, vnode: VNode) => {
+        if (vnode.elm) {
+          let focusElement = navigationService.getFocusElementById((<HTMLScriptElement>vnode.elm).id);
+          if (focusElement && focusElement.isFocus)
+            focusElement.focus();
         }
       },
       unbind: (el: any, binding: any, vnode: VNode) => {
