@@ -19,6 +19,7 @@ Vue directive (Vue.js 2.x) for spatial navigation (keyboard navigation)
 ```console
 npm install vue-spatialnavigation --save
 ```
+Then replace the lib folder with this version
 
 ## Spatial navigation
 Spatial navigation is keyboard navigation of a html page most often used on devices where mouse navigation is not available or not preferred. An important rule is that only 1 element can have the active 'focus' state at the same time.
