@@ -1,4 +1,4 @@
-<h1 align="center">vue-spatialnavigation</h1>
+<h1 align="center">vue-spatialnavigation (including the latest Fixes)</h1>
 
 Vue directive (Vue.js 2.x) for spatial navigation (keyboard navigation)
 
